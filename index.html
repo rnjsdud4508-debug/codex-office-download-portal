@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Codex 업무 프로그램 포털</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Codex Office Delivery</p>
+        <h1>업무 프로그램 다운로드 포털</h1>
+        <p class="lead">
+          Codex에서 만든 업무용 프로그램을 한 곳에서 내려받는 정적 포털입니다.
+          사무실에서는 이 페이지에 접속한 뒤 필요한 프로그램의 압축파일이나 사용방법 문서를 다운로드하면 됩니다.
+        </p>
+      </div>
+      <div class="hero-panel">
+        <p class="panel-title">기본 사용 흐름</p>
+        <ol>
+          <li>프로그램 카드를 열어 설명을 확인합니다.</li>
+          <li>먼저 사용방법 PDF를 열어 입력 파일과 절차를 확인합니다.</li>
+          <li>가능하면 `zip` 파일을 내려받아 압축을 해제합니다.</li>
+          <li>압축 해제 후 실행 파일을 실행합니다.</li>
+        </ol>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="toolbar-left">
+        <label class="search-label" for="app-search">프로그램 검색</label>
+        <input id="app-search" class="search-input" type="search" placeholder="프로그램명, 설명, 태그 검색">
+      </div>
+      <div class="toolbar-right">
+        <span id="app-count" class="count-badge">0개 프로그램</span>
+      </div>
+    </section>
+
+    <main>
+      <section class="collection-head">
+        <div>
+          <p class="section-kicker">Available Apps</p>
+          <h2>배포 중인 프로그램</h2>
+        </div>
+        <p class="section-note">새 프로그램은 같은 구조로 계속 추가하면 됩니다.</p>
+      </section>
+
+      <section id="app-grid" class="app-grid" aria-live="polite"></section>
+
+      <section class="guide-card">
+        <div>
+          <p class="section-kicker">Portal Rule</p>
+          <h2>앞으로 추가하는 방법</h2>
+        </div>
+        <ul>
+          <li>`files/프로그램슬러그/` 폴더를 만들고 `zip`, `exe`, `PDF`를 넣습니다.</li>
+          <li>`apps.json`에 프로그램 메타데이터와 다운로드 경로를 추가합니다.</li>
+          <li>GitHub에 push하면 포털 페이지가 그대로 갱신됩니다.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <template id="app-card-template">
+    <article class="app-card">
+      <div class="app-card-top">
+        <div>
+          <p class="app-category"></p>
+          <h3 class="app-title"></h3>
+          <p class="app-subtitle"></p>
+        </div>
+        <span class="app-status"></span>
+      </div>
+
+      <div class="app-meta">
+        <span class="meta-chip meta-version"></span>
+        <span class="meta-chip meta-date"></span>
+      </div>
+
+      <p class="app-summary"></p>
+
+      <div class="tag-list"></div>
+
+      <div class="download-list"></div>
+
+      <div class="note-block">
+        <p class="note-title">사용 전 확인</p>
+        <ul class="note-list"></ul>
+      </div>
+    </article>
+  </template>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
