@@ -5,7 +5,7 @@
     "title": "거래가축 자동완성",
     "subtitle": "농업e지 채혈대상 조회 파일을 읽어 브루셀라 의뢰 농가명단 엑셀을 자동 생성",
     "status": "사용 가능",
-    "version": "2026.04.15.1",
+    "version": "2026.04.15.2",
     "updated": "2026-04-15",
     "summary": "비밀번호가 걸린 채혈대상 조회.xlsx를 읽어 원본 양식을 유지한 채 날짜, 읍면, 성명, 브루셀라 검사두수, 결핵 검사두수, 채혈자를 자동으로 채웁니다. 최신 채혈대상 조회 파일을 자동으로 찾아주고, 검사 두수 0은 해당없음으로 처리합니다.",
     "tags": [
@@ -27,6 +27,11 @@
         "href": "files/trade-livestock-autofill/trade_livestock_autofill_tool.exe"
       },
       {
+        "label": "인수인계서 PDF",
+        "kind": "문서",
+        "href": "files/trade-livestock-autofill/trade_livestock_autofill_manual.pdf"
+      },
+      {
         "label": "사용 안내 txt",
         "kind": "문서",
         "href": "files/trade-livestock-autofill/trade_livestock_autofill_readme.txt"
@@ -37,7 +42,8 @@
       "비밀번호는 저장하지 않으므로 그날 농업e지에서 설정한 비밀번호를 입력하면 됩니다.",
       "프로그램이 다운로드 폴더와 현재 폴더에서 최신 채혈대상 조회 파일을 자동으로 찾습니다.",
       "원본 양식의 글꼴, 글자크기, 셀 서식, 인쇄 영역을 유지한 채 값만 채웁니다.",
-      "2026-04-15 재배포본은 사무실 PC에서 발생한 win32timezone 누락 오류를 수정했습니다."
+      "2026-04-15 재배포본은 사무실 PC에서 발생한 win32timezone 누락 오류를 수정했습니다.",
+      "2026-04-15 프로그램 사용 인수인계서 PDF를 추가 배포했습니다."
     ]
   },
   {
